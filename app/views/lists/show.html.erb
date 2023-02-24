@@ -5,4 +5,5 @@
   <%= movie.title %>
   <%= movie.overview %>
   <%= link_to "Delete this movie", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Confirm ?"} %>
+  <%= link_to "return to main menu", lists_path %>
 <% end %>
