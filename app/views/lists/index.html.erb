@@ -2,7 +2,7 @@
 
 <% @lists.each do |list|%>
   <h2><%= link_to list.name, list_path(list) %></h2>
-  <%= link_to cl_image_tag("xismfbgez9t3plgluhia", width: 400, height: 300, crop: :fill), list_path(list) %>
+  <%= cl_image_tag("xismfbgez9t3plgluhia", width: 400, height: 300, crop: :fill) %>
 <% end %>
 
 <h2><%= link_to "add list", new_list_path %></h2>

@@ -4,6 +4,7 @@
   <% bookmark = Bookmark.find_by(movie: movie, list: @list)%>
   <p><%= movie.title %></p>
   <p><%= movie.overview %></p>
+  <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
   <%= link_to "Delete this movie", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Confirm ?"} %>
   <%= link_to "return to main menu", lists_path %>
 <% end %>
